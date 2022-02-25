@@ -4,9 +4,8 @@ plugins {
 
 android {
 	compileSdkVersion 31
-	buildToolsVersion "30.0.2"
 
-	defaultConfig {
+    defaultConfig {
 		applicationId "com.example.qrreceiptscanner"
 		minSdkVersion 21
 		targetSdkVersion 31
