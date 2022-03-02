@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">QrReceiptScanner</string>
+	<string name="app_name">QrReceiptScanner</string>
+	<string name="your_receipts">Your Receipts</string>
+	<string name="search">Search...</string>
 </resources>

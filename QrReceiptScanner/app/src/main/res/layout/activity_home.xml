@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".home.HomeActivity"
+	android:background="?attr/colorSecondary">
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/home_vw_account"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:contentPadding="4dp"
+		app:cardBackgroundColor="?attr/colorSecondaryVariant"
+		app:cardElevation="0dp"
+		app:cardCornerRadius="8dp"
+		android:layout_margin="16dp">
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/ic_baseline_account_circle_24"
+			android:tint="?attr/colorOnSecondary" />
+	</androidx.cardview.widget.CardView>
+
+	<com.google.android.material.card.MaterialCardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/home_vw_account"
+		app:cardCornerRadius="24dp"
+		android:layout_margin="16dp"
+		app:cardElevation="8dp"
+		android:id="@+id/home_search_bar">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:gravity="center_vertical">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_baseline_search_24" />
+
+			<TextView
+				android:layout_marginLeft="8dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/search" />
+		</LinearLayout>
+	</com.google.android.material.card.MaterialCardView>
+
+	<LinearLayout
+		app:layout_constraintBottom_toBottomOf="parent"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="@drawable/bg_home"
+		android:layout_marginTop="16dp"
+		android:orientation="vertical"
+		android:gravity="center_horizontal"
+		app:layout_constraintTop_toBottomOf="@id/home_search_bar">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/your_receipts"
+			android:padding="16dp"
+			android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/home_rv"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:clipToPadding="false"
+			app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+			tools:listitem="@layout/row_home"
+			android:padding="8dp" />
+
+		<com.google.android.material.floatingactionbutton.FloatingActionButton
+			android:id="@+id/home_fab"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:backgroundTint="?attr/colorPrimary"
+			android:layout_margin="16dp"
+			android:foregroundTint="?attr/colorOnPrimary"
+			android:src="@drawable/ic_baseline_qr_code_scanner_24" />
+	</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
