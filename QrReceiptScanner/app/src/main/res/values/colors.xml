@@ -5,4 +5,5 @@
 	<color name="cyan_300">#ff87c8ae</color>
 	<color name="cyan_500">#ff4caa9c</color>
 	<color name="blue_grey_800">#ff3d4144</color>
+	<color name="black">#ff000000</color>
 </resources>
