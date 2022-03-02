@@ -15,6 +15,10 @@
 			android:name=".home.HomeActivity"
 			android:theme="@style/Theme.QrReceiptScanner.NoActionBar" />
 
+		<activity
+			android:name=".loginScreen"
+			android:exported="false" />
+
 		<activity android:name=".MainActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
