@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_margin="20dp"
+	tools:context=".OrderReceipt">
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Order#: "
+		android:textColor="@color/black"
+		android:textSize="20dp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="@id/guideline2"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/OrderNumber"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="order number"
+		android:textSize="20dp"
+		app:layout_constraintEnd_toEndOf="parent"
+
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintLeft_toRightOf="@+id/textView"
+		app:layout_constraintStart_toEndOf="@+id/textView"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/Status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Status: "
+		android:textColor="@color/black"
+		android:textSize="20dp"
+		android:textStyle="bold"
+		app:layout_constraintHorizontal_bias="0.01"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintStart_toStartOf="@id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+	<TextView
+		android:id="@+id/StatusValue"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Status Value"
+		android:textSize="20dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.06"
+		app:layout_constraintStart_toEndOf="@+id/Status"
+		app:layout_constraintTop_toBottomOf="@+id/OrderNumber" />
+
+	<TextView
+		android:id="@+id/OrderDate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Data: "
+		android:textColor="@color/black"
+		android:textSize="20dp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="@id/guideline2"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/Status" />
+
+	<TextView
+		android:id="@+id/OrderDataValue"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Current Data"
+		android:textSize="20dp"
+		app:layout_constraintHorizontal_bias="0.11"
+		app:layout_constraintLeft_toRightOf="@+id/OrderDate"
+		app:layout_constraintTop_toBottomOf="@id/StatusValue" />
+
+	<TextView
+		android:id="@+id/FlowersubTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="The Basic Kit"
+		android:textSize="18dp"
+		app:layout_constraintStart_toStartOf="@id/guideline2"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/FlowerType" />
+
+	<TextView
+		android:id="@+id/FlowerType"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Flower Type for Photoshop "
+		android:layout_marginTop="30dp"
+		android:textColor="@color/black"
+		android:textSize="20dp"
+		android:textStyle="bold"
+		app:layout_constraintHorizontal_chainStyle="packed"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintStart_toStartOf="@id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/OrderDate" />
+
+	<TextView
+		android:id="@+id/FlowerType2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="30dp"
+		android:text="Cost"
+		android:textSize="20dp"
+		app:layout_constraintLeft_toRightOf="@+id/FlowerType"
+		app:layout_constraintTop_toBottomOf="@id/OrderDate"
+		app:layout_constraintEnd_toEndOf="@id/guideline3" />
+
+	<View
+		android:id="@+id/divider"
+		android:layout_width="match_parent"
+		android:layout_height="3dp"
+		android:layout_margin="20dp"
+		android:layout_marginBottom="35dp"
+		android:background="@color/black"
+		app:layout_constraintTop_toBottomOf="@+id/FlowersubTitle"
+		tools:layout_editor_absoluteX="0dp"
+		tools:layout_editor_absoluteY="105dp" />
+
+	<TextView
+		android:id="@+id/Subtotal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="Subtotal"
+		android:textSize="20dp"
+		app:layout_constraintStart_toStartOf="@id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="Value"
+		android:textSize="20dp"
+		app:layout_constraintEnd_toEndOf="@id/guideline3"
+		app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+	<TextView
+		android:id="@+id/Discount"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="Discount"
+		android:textSize="20dp"
+		app:layout_constraintStart_toStartOf="@id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/Subtotal" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="DisValue"
+		android:textSize="20dp"
+		app:layout_constraintEnd_toEndOf="@id/guideline3"
+		app:layout_constraintTop_toBottomOf="@+id/Subtotal" />
+
+	<TextView
+		android:id="@+id/Tax"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="Tax"
+		android:textSize="20dp"
+		app:layout_constraintStart_toStartOf="@+id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/Discount" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="TaxValue"
+		android:textSize="20dp"
+		app:layout_constraintEnd_toEndOf="@id/guideline3"
+		app:layout_constraintTop_toBottomOf="@+id/Discount" />
+
+	<TextView
+		android:id="@+id/TOtal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="Total"
+		android:textStyle="bold"
+		android:textSize="20dp"
+		app:layout_constraintStart_toStartOf="@+id/guideline2"
+		app:layout_constraintTop_toBottomOf="@+id/Tax" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:text="TotalValue"
+		android:textSize="20dp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="@id/guideline3"
+		app:layout_constraintTop_toBottomOf="@+id/Tax" />
+
+	<View
+		android:id="@+id/divider2"
+		android:layout_width="match_parent"
+		android:layout_height="3dp"
+		android:layout_margin="20dp"
+		android:background="@color/black"
+		android:layout_marginTop="35dp"
+		app:layout_constraintTop_toBottomOf="@+id/TOtal"
+		tools:layout_editor_absoluteX="0dp"
+		tools:layout_editor_absoluteY="105dp" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_end="351dp" />
+
+	<androidx.constraintlayout.widget.Barrier
+		android:id="@+id/barrier3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:barrierDirection="left" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
