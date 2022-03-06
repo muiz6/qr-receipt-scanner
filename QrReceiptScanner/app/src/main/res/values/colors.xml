@@ -6,4 +6,5 @@
 	<color name="cyan_500">#ff4caa9c</color>
 	<color name="blue_grey_800">#ff3d4144</color>
 	<color name="black">#ff000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>
