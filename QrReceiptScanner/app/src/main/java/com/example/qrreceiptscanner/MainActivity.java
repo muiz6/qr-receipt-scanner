@@ -18,12 +18,15 @@ public class MainActivity extends AppCompatActivity {
 		final SharedPreferences sharedPref = getSharedPreferences(Params.MY_SHARED_PREFS,
 				MODE_PRIVATE);
 		final int userId = sharedPref.getInt(Params.USER_ID, -1);
-		Intent intent;
-		if (userId != -1) {
-			intent = new Intent(this, HomeActivity.class);
-		} else {
-			intent = new Intent(this, loginScreen.class);
-		}
+
+		// todo: fix this
+		Intent intent = new Intent(this, HomeActivity.class);
+		// if (userId != -1) {
+		// 	intent = new Intent(this, HomeActivity.class);
+		// } else {
+		// 	intent = new Intent(this, loginScreen.class);
+		// }
+
 		startActivity(intent);
 	}
 }

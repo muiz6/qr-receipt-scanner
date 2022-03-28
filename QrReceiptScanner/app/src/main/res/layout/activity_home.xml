@@ -89,6 +89,7 @@
 			android:backgroundTint="?attr/colorPrimary"
 			android:layout_margin="16dp"
 			android:foregroundTint="?attr/colorOnPrimary"
-			android:src="@drawable/ic_baseline_qr_code_scanner_24" />
+			android:src="@drawable/ic_baseline_qr_code_scanner_24"
+			android:onClick="onScan" />
 	</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
