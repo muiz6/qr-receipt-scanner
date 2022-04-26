@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 		final int userId = sharedPref.getInt(Params.USER_ID, -1);
 
 		// todo: fix this
-		Intent intent = new Intent(this, HomeActivity.class);
+		Intent intent = new Intent(this, loginScreen.class);
 		// if (userId != -1) {
 		// 	intent = new Intent(this, HomeActivity.class);
 		// } else {
