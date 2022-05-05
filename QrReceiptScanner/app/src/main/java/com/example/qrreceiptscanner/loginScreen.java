@@ -1,9 +1,7 @@
 package com.example.qrreceiptscanner;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -15,20 +13,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.qrreceiptscanner.home.HomeActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class loginScreen extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private FirebaseAuth auth;
+    private SharedPreferences.Editor prefEditor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +52,7 @@ public class loginScreen extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
+        prefEditor = getSharedPreferences(Params.MY_SHARED_PREFS, MODE_PRIVATE).edit();
     }
 
     public void login(View view) {
@@ -76,8 +76,12 @@ public class loginScreen extends AppCompatActivity {
                             toast.show();
                         }
                     } else {
-                        Toast toast = Toast.makeText(getApplicationContext(), "login, go to next screen", Toast.LENGTH_SHORT);
-                        toast.show();
+                        prefEditor.putString(Params.USER_EMAIL,
+                                task.getResult().getUser().getEmail());
+                        prefEditor.commit();
+                        Intent intent = new Intent(loginScreen.this, HomeActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
                 }
             });

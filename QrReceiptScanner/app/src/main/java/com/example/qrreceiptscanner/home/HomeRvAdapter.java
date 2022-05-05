@@ -10,7 +10,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qrreceiptscanner.R;
 
+import java.util.List;
+import java.util.Map;
+
 public class HomeRvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+	List<Map<String, Object>> data;
+
+	public HomeRvAdapter(List<Map<String, Object>> data) {
+		this.data = data;
+	}
+
 	@NonNull
 	@Override
 	public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -25,12 +34,12 @@ public class HomeRvAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 		final TextView tvTitle = holder.itemView.findViewById(R.id.row_home_title);
 		final TextView tvSubtitle = holder.itemView.findViewById(R.id.row_home_subtitle);
 
-		tvTitle.setText("Item " + (position + 1));
-		tvSubtitle.setText("Subtitle " + position + 1);
+		tvTitle.setText("Item " + data.get(position).get("id"));
+		tvSubtitle.setText((String) data.get(position).get("data"));
 	}
 
 	@Override
 	public int getItemCount() {
-		return 20;
+		return data.size();
 	}
 }

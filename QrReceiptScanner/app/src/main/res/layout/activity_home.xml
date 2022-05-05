@@ -18,12 +18,13 @@
 		app:cardBackgroundColor="?attr/colorSecondaryVariant"
 		app:cardElevation="0dp"
 		app:cardCornerRadius="8dp"
-		android:layout_margin="16dp">
+		android:layout_margin="16dp"
+		android:onClick="onSignOut">
 
 		<ImageView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:src="@drawable/ic_baseline_account_circle_24"
+			android:src="@drawable/ic_baseline_arrow_back_24"
 			android:tint="?attr/colorOnSecondary" />
 	</androidx.cardview.widget.CardView>
 
@@ -34,7 +35,8 @@
 		app:cardCornerRadius="24dp"
 		android:layout_margin="16dp"
 		app:cardElevation="8dp"
-		android:id="@+id/home_search_bar">
+		android:id="@+id/home_search_bar"
+		android:onClick="onSearch">
 
 		<LinearLayout
 			android:layout_width="match_parent"

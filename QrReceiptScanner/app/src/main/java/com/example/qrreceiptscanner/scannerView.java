@@ -1,13 +1,12 @@
 package com.example.qrreceiptscanner;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.qrreceiptscanner.home.DBHelper;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.zxing.Result;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
