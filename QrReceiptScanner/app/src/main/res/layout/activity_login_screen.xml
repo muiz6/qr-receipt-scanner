@@ -92,15 +92,14 @@
         android:onClick="login"/>
 
     <TextView
-        android:id="@+id/register_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="New To Logistics? Register"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/materialButton"
-        tools:layout_editor_absoluteX="25dp"
-        android:paddingTop="8dp"
-        />
-
+		android:id="@+id/register_text_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="New To Logistics? Register"
+		android:textAlignment="center"
+		app:layout_constraintTop_toBottomOf="@+id/materialButton"
+		tools:layout_editor_absoluteX="25dp"
+		android:paddingTop="8dp"
+		android:onClick="onSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

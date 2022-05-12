@@ -82,7 +82,8 @@
 			android:clipToPadding="false"
 			app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 			tools:listitem="@layout/row_home"
-			android:padding="8dp" />
+			android:padding="8dp"
+			android:scrollbars="vertical" />
 
 		<com.google.android.material.floatingactionbutton.FloatingActionButton
 			android:id="@+id/home_fab"

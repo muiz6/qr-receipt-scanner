@@ -77,14 +77,19 @@ public class loginScreen extends AppCompatActivity {
                         }
                     } else {
                         prefEditor.putString(Params.USER_EMAIL,
-                                task.getResult().getUser().getEmail());
-                        prefEditor.commit();
-                        Intent intent = new Intent(loginScreen.this, HomeActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                }
-            });
-        }
-    }
+								task.getResult().getUser().getEmail());
+						prefEditor.commit();
+						Intent intent = new Intent(loginScreen.this, HomeActivity.class);
+						startActivity(intent);
+						finish();
+					}
+				}
+			});
+		}
+	}
+
+	public void onSignUp(View vw) {
+		startActivity(new Intent(this, SignUpActivity.class));
+		finish();
+	}
 }
